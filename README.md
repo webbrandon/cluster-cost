@@ -71,6 +71,16 @@ cluster-cost predict -n 2x.xhighmem --cpu 3 --memory 9
 cluster-cost predict -n 2x.xhighmem --cpu 3 --memory 9 --scale 20
 ```
 
+**Analyze the entire cluster.**
+```bash
+cluster-cost analyze
+```
+
+**Analyze the a single namespace environment.**
+```bash
+cluster-cost analyze --namespace production
+```
+
 ### Using as Daemon
 
 Daemon mode runs cluster_cost as HTTP REST service.  You can either use the options arguments to predefine route values or environment value equivalents. See below examples.

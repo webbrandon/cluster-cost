@@ -8,14 +8,14 @@ release:
 	./build_exec.sh
 	@git tag ${TAG} | :
 	@git push origin --tags | :
-	curl -X POST --data-binary "@debian" "https://uploads.github.com/repos/webbrandon/cluster_cost/releases/${TAG}/assets?name=debian"
-	curl -X POST --data-binary "@darwin" "https://uploads.github.com/repos/webbrandon/cluster_cost/releases/${TAG}/assets?name=darwin"
+	curl -X POST --data-binary "@debian" "https://uploads.github.com/repos/webbrandon/cluster-cost/releases/${TAG}/assets?name=debian"
+	curl -X POST --data-binary "@darwin" "https://uploads.github.com/repos/webbrandon/cluster-cost/releases/${TAG}/assets?name=darwin"
 
 build:
 	cargo build --release
 	mv ./target/release/$(APP) ./$(APP)
 
-install: 
+install:
 	mv $(APP) /usr/local/bin/$(APP)
 
 clean:
