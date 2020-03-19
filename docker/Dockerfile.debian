@@ -1,8 +1,8 @@
 FROM rust:stretch
 
-COPY . /opt/cluster_cost
+COPY . /opt/cluster-cost
 
-WORKDIR /opt/cluster_cost
+WORKDIR /opt/cluster-cost
 
 RUN cargo build --release
 
