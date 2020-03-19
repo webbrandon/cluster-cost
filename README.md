@@ -9,13 +9,13 @@ Use the below command to install binary or build from source.
 Binary install:  
 
 ```bash
-curl https://themindcompany.github.io/cluster-cost/install.sh -sS | bash -s
+curl https://webbrandon.github.io/cluster-cost/install.sh -sS | bash -s
 ```
 
 Source install:
 
 ```bash
-git clone https://github.com/TheMindCompany/cluster-cost.git
+git clone https://github.com/webbrandon/cluster-cost.git
 cd cluster-cost
 make build
 make install
