@@ -1,0 +1,9 @@
+FROM rust:stretch
+
+COPY . /opt/cluster_cost
+
+WORKDIR /opt/cluster_cost
+
+RUN cargo build --release
+
+CMD ["echo", "Complete!"]

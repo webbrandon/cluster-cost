@@ -1,0 +1,30 @@
+apiVersion: v1
+items:
+- metadata:
+    name: maclir-5abc16e961e4e40007bc8a0c-clock
+    namespace: visits
+  spec:
+    selector:
+      matchLabels:
+        busbar.io/app: maclir
+        busbar.io/component: clock
+        busbar.io/environment: visits
+    template:
+      spec:
+        containers:
+        - name: maclir-5abc16e961e4e40007bc8a0c-clock
+          resources:
+            limits:
+              cpu: "4"
+              memory: 2000Mi
+            requests:
+              cpu: 40m
+              memory: 2000Mi
+        nodeSelector:
+          beta.kubernetes.io/instance-type: m5.4xlarge
+  status:
+    availableReplicas: 1
+    readyReplicas: 1
+    replicas: 1
+    updatedReplicas: 1
+kind: List
